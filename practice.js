@@ -50,13 +50,13 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Create a function named 'looper' that is given family as it's only argument. 
   Loop through the given array and alert every item in the array.
 */
-  function looper(arr) {
-  for (let i = 0; i < arr.length; i++) {
+  function looper(family) {
+  for (let i = 0; i < family.length; i++) {
     
-    alert(i);
+    alert(family[i]);
   }
 }
-looper(family);
+
 
 
 ////////// PROBLEM 4 //////////
@@ -71,8 +71,8 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 let reversedLooper = function(letters) {
-  for (let i = letters.length; i > 0; i--) {
-    alert(i);
+  for (let i = letters.length - 1; i >= 0; i--) {
+    alert(letters[i]);
   }
 }
 
@@ -125,19 +125,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-function divider(arr) {
+function divider(numbersArray) {
   let evenArr = [];
   let oddArr = [];
+
   for (let i = 0; i < numbersArray.length; i++) {
     if (numbersArray[i] % 2 === 0) {
       evenArr.push(numbersArray[i]);
     } else {
       oddArr.push(numbersArray[i]);
     }
-    return evenArr.concat(oddArr);
   }
+  return [evenArr, oddArr];
 }
-divider(numbersArray);
+
 
 
 
