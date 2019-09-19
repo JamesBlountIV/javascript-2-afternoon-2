@@ -50,12 +50,13 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Create a function named 'looper' that is given family as it's only argument. 
   Loop through the given array and alert every item in the array.
 */
-let looper = function(family) {
-  for (let i = 0; i < family.length; i++) {
+  function looper(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    
     alert(i);
   }
 }
-
+looper(family);
 
 
 ////////// PROBLEM 4 //////////
@@ -124,7 +125,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(arr) {
+  let evenArr = [];
+  let oddArr = [];
+  for (let i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2 === 0) {
+      evenArr.push(numbersArray[i]);
+    } else {
+      oddArr.push(numbersArray[i]);
+    }
+    return evenArr.concat(oddArr);
+  }
+}
+divider(numbersArray);
 
 
 
@@ -299,7 +312,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = [];
 
 
 
@@ -317,8 +330,23 @@ var user1 = {
     username: 'ihazcode'
 };
 // Do not edit the code above.
+users.push(user1);
 
-//Code Here
+let user2 = {
+  name: 'kindred wolf',
+  email: 'neverOne.WithoutTheOther@summ.rift',
+  password: 'easySt@cks',
+  username: 'dexter'
+};
+users.push(user2);
+
+let user3 = {
+  name: 'graves shotty',
+  email: 'highnoon.crit@rank.one',
+  password: 'toxicjung',
+  username: 'tarzaned'
+};
+users.push(user3);
 
 
 
@@ -332,7 +360,11 @@ var user1 = {
   Once you find the array index he's located in, delete him from the array.
 */
 
-//Code Here
+for (let i = 0; i < users.length; i++) {
+  if (users[i].email === 'mark.mciver@devmounta.in') {
+    delete users[i];
+  }
+ }
 
 
 
